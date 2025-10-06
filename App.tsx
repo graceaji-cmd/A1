@@ -21,6 +21,8 @@ import Footer from "./app/components/Footer";
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
+
+  /* BEGIN FONT LOADING CODE -- You don't need to touch this section unless you want to. */
   const [fontsLoaded] = useFonts({
     Sydney: require("./assets/Fonts/Sydney-Serial-Regular.ttf"),
     "Sydney-Bold": require("./assets/Fonts/Sydney-Serial-Bold.ttf"),
@@ -33,9 +35,10 @@ export default function App() {
   }, [fontsLoaded]);
 
   if (!fontsLoaded) return null;
-  /* ^Don't mind/edit the code above, it's there to load the font for you! */
+  /* END FONT LOADING CODE */
+
+  // If you want to use dark mode, change this accordingly.
   StatusBar.setBarStyle(Themes.light.statusBar);
-  /* ^Don't mind/edit this one either unless you decide to do the dark theme one, in that case, you will have to change it accordingly */
 
   return (
     <View style={styles.container} onLayout={onLayoutRootView}>

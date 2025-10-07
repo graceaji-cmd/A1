@@ -6,6 +6,7 @@ import Profiles from "../../assets/Profiles";
  * You can import them by giving the name of the folder the index.js
  * is located in! */
 import Icons from "../../assets/Icons";
+import { Themes } from "../../assets/Themes";
 
 /* This handy trick grabs the width and height of the device's window,
  * which lets you set the sizes of your UI elements relative to the
@@ -16,9 +17,9 @@ const windowHeight = Dimensions.get("window").height;
 const Header = () => {
   return (
     <View style={styles.header}>
-      <View>
+      <View style={styles.left}>
         <Text style={styles.name}>{Profiles.landay.name}</Text>
-        <Text>{Profiles.landay.pronouns}</Text>
+        <Text style={styles.pronouns}>{Profiles.landay.pronouns}</Text>
       </View>
       <Image
         source={Icons.sun /* For dark mode, use Icons.moon */}
@@ -29,20 +30,30 @@ const Header = () => {
 };
 
 const styles = StyleSheet.create({
-  headerIcon: {
-    height: windowWidth * 0.1,
-    width: windowWidth * 0.1,
-  },
   header: {
     flexDirection: "row",
-    // fill the rest of this in!
-    
+    alignItems: "center",
+    paddingTop: 40,
+    paddingHorizontal: 20,
+  },
+  left: {
+    flex: 1,
+    minWidth: 0,
   },
   name: {
-    // We've loaded this font for you in App.js
-    fontFamily: "Sydney-Bold", // 'Sydney' is the non-bold version
+    fontFamily: "Sydney-Bold",
+    fontSize: 32,
   },
-  // add more styles for other components!
+  pronouns: {
+    fontFamily: "Sydney",
+    fontSize: 16,
+    marginTop: 2,
+  },
+  headerIcon: {
+    height: Dimensions.get("window").width * 0.1,
+    width: Dimensions.get("window").width * 0.1,
+    marginLeft: "auto",
+  },
 });
 
 export default Header;

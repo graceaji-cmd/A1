@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
   screen: {
     paddingHorizontal: 20,
     paddingTop: 20,
+    marginBottom: "15%",
   },
   cardShadow: {
     shadowColor: "#000",
@@ -66,9 +67,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     borderRadius: 15,
     backgroundColor: Themes.light.bgSecondary,
-    height: 100,
-
-    alignItems: "flex-start",
+    height: 120,
     justifyContent: "space-around",
     paddingHorizontal: 15,
   },
@@ -77,9 +76,10 @@ const styles = StyleSheet.create({
     height: 40,
   },
   waveIcon: {
-    height: 28,
-    width: "60%",
+    flex: 1,
+    height: 40,
     resizeMode: "contain",
+    alignContent: "flex-end",
   },
   iconRow: {
     flexDirection: "row",

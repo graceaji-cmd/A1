@@ -1,7 +1,7 @@
 /**
  * You don't need to edit this file, but you can if you want!
  * Almost of the work for this assignment is in Header.js, Body.js, and Footer.js.
- * 
+ *
  * If you're doing the light/dark mode toggle extension, you will need to make
  * a couple tweaks here.
  */
@@ -21,7 +21,6 @@ import Footer from "./app/components/Footer";
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-
   /* BEGIN FONT LOADING CODE -- You don't need to touch this section unless you want to. */
   const [fontsLoaded] = useFonts({
     Sydney: require("./assets/Fonts/Sydney-Serial-Regular.ttf"),
@@ -55,6 +54,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Themes.light.bg,
     alignItems: "center",
-    paddingHorizontal: 16,
+    // paddingHorizontal: 16,
   },
 });
